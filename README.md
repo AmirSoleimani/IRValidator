@@ -1,4 +1,4 @@
-![travis build, test](https://travis-ci.org/AmirSoleimani/IRValidator.svg?branch=master)
+![travis build, test](https://travis-ci.org/AmirSoleimani/IRValidator.svg?branch=master) [![N|Boom](https://api.codeclimate.com/v1/badges/bb0e7201fb6e1768db34/test_coverage)](https://codeclimate.com/github/AmirSoleimani/IRValidator/test_coverage)
 
 # Installation
 
