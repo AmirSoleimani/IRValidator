@@ -1,3 +1,5 @@
+https://travis-ci.org/AmirSoleimani/IRValidator.svg?branch=master
+
 # Installation
 
 Just use go get.
