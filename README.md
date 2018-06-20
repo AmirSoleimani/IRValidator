@@ -1,4 +1,4 @@
-https://travis-ci.org/AmirSoleimani/IRValidator.svg?branch=master
+![travis build, test](https://travis-ci.org/AmirSoleimani/IRValidator.svg?branch=master)
 
 # Installation
 
