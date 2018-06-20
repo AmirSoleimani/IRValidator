@@ -10,7 +10,7 @@ And then just import the package into your own code.
 
 ```go
 import (
-	"github.com/AmirSoleimani/IRValidator"
+	"github.com/AmirSoleimani/IRValidator/validate"
 )
 ```
 
@@ -18,28 +18,28 @@ import (
 
 
 ```go
-package main
-
 import (
 	"fmt"
-	iv "github.com/AmirSoleimani/IRValidator"
+
+	iv "github.com/AmirSoleimani/IRValidator/validate"
 )
 
 func main() {
 	// CardNumber check
-	if err := iv.validate.CardNumber("6221061049447982"); err != nil {
+	if err := iv.CardNumber("6221061049447982"); err != nil {
 		fmt.Println(err)
 	}
 
 	// NationalID check
-	if err := iv.validate.NationalID("1111111111"); err != nil {
+	if err := iv.NationalID("1111111111"); err != nil {
 		fmt.Println(err)
 	}
 
 	// IBAN check
-	if err := iv.validate.IBAN("IR340570030280001175105001"); err != nil {
+	if err := iv.IBAN("IR340570030280001175105001"); err != nil {
 		fmt.Println(err)
 	}
 }
+
 
 ```
