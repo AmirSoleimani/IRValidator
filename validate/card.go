@@ -6,9 +6,9 @@ import (
 )
 
 var firstNumValid = [3]uint8{
-	6,
-	5,
-	4,
+	54, //6
+	53, //5
+	42, //4
 }
 
 //CardNumber card number validation
@@ -18,24 +18,14 @@ func CardNumber(value string) error {
 		return errors.New("card length < 16 :)")
 	}
 
-	// convert string to int slice
-	var valueSlices []uint8
-	for _, s := range value {
-		i, err := strconv.ParseInt(string(s), 10, 8)
-		if err != nil {
-			return errors.New("string problem")
-		}
-		valueSlices = append(valueSlices, uint8(i))
-	}
-
 	// check #1 > first number
-	err := checkFirstCardNumber(valueSlices[0])
+	err := checkFirstCardNumber(value[0])
 	if err != nil {
 		return err
 	}
 
 	// check #2 > calcualte *slices < 10
-	sum := calculateCardNumbers(&valueSlices)
+	sum := calculateCardNumbers(&value)
 
 	// check #3 > %10 = 0
 	if sum%10 != 0 {
@@ -57,15 +47,16 @@ func checkFirstCardNumber(firstNum uint8) error {
 }
 
 //calculateCardNumbers Yo
-func calculateCardNumbers(valueSlices *[]uint8) (sum uint8) {
+func calculateCardNumbers(valueSlices *string) (sum uint64) {
 	for i := 0; i < len(*valueSlices); i++ {
-		var x uint8
+		v, _ := strconv.ParseUint(string((*valueSlices)[i]), 10, 8)
+		var x uint64
 		if i%2 == 0 {
-			if x = (*valueSlices)[i] * 2; x > 10 {
+			if x = v * 2; x > 10 {
 				x -= 9
 			}
 		} else {
-			x = (*valueSlices)[i]
+			x = v
 		}
 		sum += x
 	}
