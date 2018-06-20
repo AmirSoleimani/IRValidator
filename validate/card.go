@@ -61,8 +61,7 @@ func calculateCardNumbers(valueSlices *[]uint8) (sum uint8) {
 	for i := 0; i < len(*valueSlices); i++ {
 		var x uint8
 		if i%2 == 0 {
-			x = (*valueSlices)[i] * 2
-			if x > 10 {
+			if x = (*valueSlices)[i] * 2; x > 10 {
 				x -= 9
 			}
 		} else {
