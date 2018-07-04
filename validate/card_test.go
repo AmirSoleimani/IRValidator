@@ -17,6 +17,7 @@ func TestCard(t *testing.T) {
 		{value: "6221061049447983", want: errors.New("")},
 		{value: "۶۲۲۱۰۶۱۰۴۹۴۴۷۹۸۲", want: errors.New("")},
 		{value: "6221061049447982", want: nil},
+		{value: "6395991166685826", want: nil},
 	}
 	for _, data := range tables {
 		err := CardNumber(data.value)

@@ -7,7 +7,7 @@ import (
 
 func main() {
 	// CardNumber check
-	if err := validate.CardNumber("6221061049447982"); err != nil {
+	if err := validate.CardNumber("6395991166685826"); err != nil {
 		fmt.Println(err)
 	}
 

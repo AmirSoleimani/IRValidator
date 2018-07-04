@@ -52,7 +52,7 @@ func calculateCardNumbers(valueSlices *string) (sum uint64) {
 		v, _ := strconv.ParseUint(string((*valueSlices)[i]), 10, 8)
 		var x uint64
 		if i%2 == 0 {
-			if x = v * 2; x > 10 {
+			if x = v * 2; x >= 10 {
 				x -= 9
 			}
 		} else {
