@@ -39,6 +39,13 @@ func main() {
 	if err := iv.IBAN("IR340570030280001175105001"); err != nil {
 		fmt.Println(err)
 	}
+	
+	// MobilePhone check
+    	if PhoneNumber, err := validate.MobilePhone("+989121111111"); err != nil {
+    		fmt.Println(err)
+    	} else {
+    		fmt.Println(PhoneNumber)
+    	}
 }
 
 
