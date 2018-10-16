@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"validations/validate"
+	"github.com/IRValidator-go/validate"
 )
 
 func main() {
@@ -19,5 +19,12 @@ func main() {
 	// IBAN check
 	if err := validate.IBAN("IR340570030280001175105001"); err != nil {
 		fmt.Println(err)
+	}
+
+	// MobilePhone check
+	if PhoneNumber, err := validate.MobilePhone("+989121111111"); err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(PhoneNumber)
 	}
 }
