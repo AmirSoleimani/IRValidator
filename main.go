@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/IRValidator-go/validate"
+	"validations/validate"
 )
 
 func main() {
