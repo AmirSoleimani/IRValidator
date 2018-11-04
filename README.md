@@ -4,7 +4,7 @@
 
 Just use go get.
 
-    go get github.com/AmirSoleimani/IRValidator
+    go get github.com/AmirSoleimani/IRValidator/validate
 
 And then just import the package into your own code.
 
