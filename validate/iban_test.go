@@ -16,6 +16,7 @@ func TestIBAN(t *testing.T) {
 		{value: "IR۲۷۰۵۳۰۰۰۰۰۰۱۰۰۳۲۴۲۰۰۰۰۱", want: errors.New("")},
 		{value: "IR530540103047000634411601", want: nil},
 		{value: "IR340570030280001175105001", want: nil},
+		{value: "Ir340570030280001175105001", want: nil},
 	}
 	for _, data := range tables {
 		err := IBAN(data.value)
